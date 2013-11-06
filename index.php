@@ -123,7 +123,7 @@
             };
 */
             var lang = $(this).attr('name');
-            $("form").attr('action','gerador.php?lang=' + lang);
+            $("form").attr('action','index.php?lang=' + lang);
             $("form").submit();
         });
     </script>
