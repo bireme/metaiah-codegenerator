@@ -1,0 +1,59 @@
+.jumbotron {
+    margin-bottom: 50px;
+    background-color: #333;
+    color: white;
+}
+.jumbotron h1 {
+    margin-bottom: 30px;
+}
+.form-group {
+    margin-top: 10px;
+}
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+#inputURL {
+    width: 490px;
+}
+textarea {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    min-width: 705px;
+}
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+    background-color: #FFF !important;
+    cursor: text !important;
+}
+.msg {
+    width: 60%;
+    margin: 0 auto;
+}
+.notice {
+    display: none;
+}
+.alert-success {
+    visibility: hidden;
+}
+#clipboard {
+    /*display: none;*/
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFF;
+    padding-bottom: 20px
+}
+embed {
+    margin-bottom: 14px;
+}
+#copy-dynamic:hover {
+    text-decoration: none !important;
+    color: #428bca !important;
+}
+.language {
+    margin-right: 20px;
+}
+.dropdown-toggle {
+    background-color: #333 !important;
+}
+#inputLang option { color: black; }
+.empty { color: #AAAAAA; }

@@ -29,69 +29,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
-    <style type="text/css">
-        .jumbotron {
-            margin-bottom: 50px;
-            background-color: #333;
-            color: white;
-        }
-        .jumbotron h1 {
-            margin-bottom: 30px;
-        }
-        .form-group {
-            margin-top: 10px;
-        }
-        .container {
-            margin: 0 auto;
-            text-align: center;
-        }
-        #inputURL {
-            width: 490px;
-        }
-        textarea {
-            margin-bottom: 50px;
-            margin-top: 50px;
-            min-width: 705px;
-        }
-        input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
-            background-color: #FFF !important;
-            cursor: text !important;
-        }
-        .msg {
-            width: 60%;
-            margin: 0 auto;
-        }
-        .notice {
-            display: none;
-        }
-        .alert-success {
-            visibility: hidden;
-        }
-        #clipboard {
-            display: none;
-            font-size: 16px;
-            font-weight: 700;
-            color: lime;
-        }
-        embed {
-            margin-bottom: 14px;
-        }
-        #copy-dynamic:hover {
-            text-decoration: none !important;
-            color: #428bca !important;
-        }
-        .language {
-            margin-right: 20px;
-        }
-        .dropdown-toggle {
-            background-color: #333 !important;
-        }
-        #inputLang option { color: black; }
-        .empty { color: #AAAAAA; }
-    </style>
+    <link href="css/style.css" rel="stylesheet" media="screen">
 
     <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/jquery.zclip.min.js"></script>
 
     <script>
@@ -100,8 +41,8 @@
                 path:'js/ZeroClipboard.swf',
                 copy:function(){return $('textarea#showSource').val();},
                 afterCopy:function(){
-                    $("#clipboard").css({ "display": "block" });
-                    $('#clipboard').fadeOut(5000);
+                    $("#clipboard").css({ "color": "lime" });
+                    $("#clipboard").animate({ "color": "#FFF" }, 5000);
                 }
             });
         });
@@ -194,7 +135,7 @@
             <div class="notice alert alert-warning warning1"><?php echo $locale[$lang]['warning1']; ?></div>
             <div class="notice alert alert-warning warning2"><?php echo $locale[$lang]['warning2']; ?></div>
             <div class="notice alert alert-danger"><?php echo $locale[$lang]['danger']; ?></div>
-            <div class="alert alert-success" id="success"><?php echo $locale[$lang]['success']; ?></div>
+            <div class="alert alert-success"><?php echo $locale[$lang]['success']; ?></div>
         </div>
 
         <div id="clipboard"><em><?php echo $locale[$lang]['clipboard']; ?></em></div>
@@ -217,16 +158,19 @@
                     $(".alert-success").css({ "visibility": "hidden" });
                     $(".notice").css({ "display": "none" });
                     $(".warning1").css({ "display": "block" });
+                    $("html, body").animate({ scrollTop: $(document).height()-630 }, "slow");
                 }
                 else if(url.substring(0, 7) != "http://"){
                     $(".alert-success").css({ "visibility": "hidden" });
                     $(".notice").css({ "display": "none" });
                     $(".alert-danger").css({ "display": "block" });
+                    $("html, body").animate({ scrollTop: $(document).height()-630 }, "slow");
                 }
                 else if(lang == ""){
                     $(".alert-success").css({ "visibility": "hidden" });
                     $(".notice").css({ "display": "none" });
                     $(".warning2").css({ "display": "block" });
+                    $("html, body").animate({ scrollTop: $(document).height()-630 }, "slow");
                 }
                 else {
                     var text = "<script src=\"http://reddes.bvsalud.org/support/js/metasearch-widget.js\"><\/script>\n";
@@ -242,6 +186,8 @@
                     $("#showSource").val(text);
                     $(".notice").css({ "display": "none" });
                     $(".alert-success").css({ "visibility": "visible" });
+                    $("html, body").animate({ scrollTop: $(document).height()-$(window).height() }, "slow");
+                    //$("html, body").animate({ scrollTop: $("#footer").offset().top }, "slow");
                 }
             });
         });
