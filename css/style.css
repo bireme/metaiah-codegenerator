@@ -57,3 +57,4 @@ embed {
 }
 #inputLang option { color: black; }
 .empty { color: #AAAAAA; }
+a#copy-dynamic:hover, a.hover { text-decoration: underline; color: #0000FF; }
