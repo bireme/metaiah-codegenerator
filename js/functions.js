@@ -72,10 +72,3 @@ $(document).on('click','.dropdown ul a',function(){
     $("form").attr('action','index.php?lang=' + lang);
     $("form").submit();
 });
-
-$("#inputLang").change(function () {
-    if($(this).val() == "") $(this).addClass("empty");
-    else $(this).removeClass("empty");
-});
-
-$("#inputLang").change();

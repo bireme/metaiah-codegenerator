@@ -109,5 +109,8 @@
         <div id="clipboard"><em><?php echo $locale[$lang]['clipboard']; ?></em></div>
     </div>
 
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/scripts.js"></script>
+
   </body>
 </html>
