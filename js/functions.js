@@ -33,15 +33,15 @@ $(document).ready(function(){
             $("html, body").animate({ scrollTop: $(document).height()-630 }, "slow");
         }
         else {
-            var text = "<script src=\"http://reddes.bvsalud.org/support/js/metasearch-widget.js\"><\/script>\n";
+            var text = "<script src=\"http://reddes.bvsalud.org/support/js/metasearch-widget.js\"></script>\n";
             text = text.concat("<form name=\"searchForm\" action=\"#\" method=\"post\" onsubmit=\"return(executeSearch());\" target=\"_blank\">\n");
-            text = text.concat("    <input type=\"hidden\" name=\"address\" value=\"" + url + "/\"\/>\n");
-            text = text.concat("    <input type=\"hidden\" name=\"lang\" value=\"" + lang + "\"/>\n");
-            text = text.concat("    <input type=\"hidden\" name=\"engine\" value=\"metaiah\"\/>\n");
-            text = text.concat("    <input type=\"hidden\" name=\"view\" value=\"PAGE\"\/>\n");
-            text = text.concat("    <input type=\"text\" name=\"expression\" class=\"vhl-search-input\" placeholder=\"" + labels[locate] + "\"\/>\n");
-            text = text.concat("    <input type=\"submit\" value=\"Pesquisar\" name=\"submit\" class=\"submit\"\/>\n");
-            text = text.concat("<\/form>");
+            text = text.concat("    <input type=\"hidden\" name=\"address\" value=\"" + url + "/\" />\n");
+            text = text.concat("    <input type=\"hidden\" name=\"lang\" value=\"" + lang + "\" />\n");
+            text = text.concat("    <input type=\"hidden\" name=\"engine\" value=\"metaiah\" />\n");
+            text = text.concat("    <input type=\"hidden\" name=\"view\" value=\"PAGE\" />\n");
+            text = text.concat("    <input type=\"text\" name=\"expression\" class=\"vhl-search-input\" placeholder=\"" + labels[locate] + "\" />\n");
+            text = text.concat("    <input type=\"submit\" value=\"Pesquisar\" name=\"submit\" class=\"submit\" />\n");
+            text = text.concat("</form>");
 
             $("#showSource").val(text);
             $(".notice").css({ "display": "none" });
