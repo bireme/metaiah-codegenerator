@@ -5,6 +5,7 @@ $(document).ready(function(){
         afterCopy:function(){
             $("#clipboard").css({ "color": "lime" });
             $("#clipboard").animate({ "color": "#FFF" }, 5000);
+            $("html, body").animate({ scrollTop: $(document).height()-$(window).height() }, "slow");
         }
     });
 
