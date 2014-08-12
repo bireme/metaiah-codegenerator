@@ -3,6 +3,7 @@ $(document).ready(function(){
         path:'js/ZeroClipboard.swf',
         copy:function(){return $('textarea#showSource').val();},
         afterCopy:function(){
+            $("#clipboard").stop();
             $("#clipboard").css({ "color": "lime" });
             $("#clipboard").animate({ "color": "#FFF" }, 5000);
             $("html, body").animate({ scrollTop: $(document).height()-$(window).height() }, "slow");
