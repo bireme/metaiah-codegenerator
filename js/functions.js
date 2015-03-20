@@ -37,7 +37,7 @@ $(document).ready(function(){
         else {
             var text = "<script src=\"http://reddes.bvsalud.org/support/js/metasearch-widget.js\"></script>\n";
             text = text.concat("<form name=\"searchForm\" action=\"#\" method=\"post\" onsubmit=\"return(executeSearch());\" target=\"_blank\">\n");
-            text = text.concat("    <input type=\"hidden\" name=\"address\" value=\"" + url + "/\" />\n");
+            text = text.concat("    <input type=\"hidden\" name=\"address\" value=\"" + url + "\" />\n");
             text = text.concat("    <input type=\"hidden\" name=\"lang\" value=\"" + lang + "\" />\n");
             text = text.concat("    <input type=\"hidden\" name=\"engine\" value=\"metaiah\" />\n");
             text = text.concat("    <input type=\"hidden\" name=\"view\" value=\"PAGE\" />\n");
