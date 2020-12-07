@@ -106,7 +106,7 @@
             <div class="alert alert-success"><?php echo $locale[$lang]['success']; ?></div>
         </div>
 
-        <div id="clipboard"><em><?php echo $locale[$lang]['clipboard']; ?></em></div>
+        <!-- <div id="clipboard"><em><?php echo $locale[$lang]['clipboard']; ?></em></div> -->
     </div>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
