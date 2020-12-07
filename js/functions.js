@@ -23,7 +23,7 @@ $(document).ready(function(){
             $(".warning1").css({ "display": "block" });
             $("html, body").animate({ scrollTop: $(document).height()-630 }, "slow");
         }
-        else if(url.substring(0, 7) != "http://"){
+        else if(url.substring(0, 7) != "http://" && url.substring(0, 8) != "https://"){
             $(".alert-success").css({ "visibility": "hidden" });
             $(".notice").css({ "display": "none" });
             $(".alert-danger").css({ "display": "block" });
