@@ -1,4 +1,5 @@
 $(document).ready(function(){
+/*
     $('div a#copy-dynamic').zclip({
         path:'js/ZeroClipboard.swf',
         copy:function(){return $('textarea#showSource').val();},
@@ -9,7 +10,7 @@ $(document).ready(function(){
             $("html, body").animate({ scrollTop: $(document).height()-$(window).height() }, "slow");
         }
     });
-
+*/
     $("#button").click(function () {
         var url = $('#inputURL').val();
         var lang = $('#inputLang').val();
